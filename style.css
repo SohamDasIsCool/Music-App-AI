@@ -1,0 +1,30 @@
+.heading{
+    font-size:30px;
+    width:100%;
+    margin:0px;
+    background: transparent;
+    color:blueviolet;
+}
+.heading:hover{
+    font-size:31px;
+    width:100%;
+    margin:0px;
+    background: transparent;
+    color:rgb(119, 31, 201);
+    box-shadow:2px 2px 2px white;
+}
+.note{
+    color:rgb(185, 136, 231);
+    font-size:25px;
+}
+.div_main{
+float:none;
+}
+.div_main_img{
+    width:100px;
+    border-radius:100px;
+}
+#main{
+    font-size:15px;
+    margin:15px;
+}
