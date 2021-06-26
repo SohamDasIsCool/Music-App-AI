@@ -6,6 +6,8 @@ rightWristX=0;
 rightWristY=0;
 leftWristX=0;
 leftWristY=0;
+playing_1=null;
+playing_2=null;
 function preload(){
     song_1=loadSound("music.mp3");
     song_2=loadSound("music2.mp3");
@@ -35,17 +37,22 @@ function draw(){
     image(video,0,0,400,300);
     fill("#FF0000");
     stroke("#FF0000");
-    x=song_1.isPlaying;
-if(x==true){
-    if(leftWrist_score>0.2){
-        circle(leftWristX,leftWristY,20);
-        song_1.play();
+    playing_1=song_1.isPlaying();
+    playing_2=song_2.isPlaying();
+    if(rightWrist_score>0.1){
+        circle(rightWristX,rightWristY,20);
         song_2.stop();
     }
-    else{
-        circle(rightWristX,rightWristY,20);
-        song_2.play();
-        song_1.stop();
+        if(playing_1==false){
+            song_1.play();
+            document.getElementById("main").innerHTML="Current Song:Hogwarts in style";
+        }
+        if(leftWrist_score>0.1){
+            circle(leftWristX,leftWristY,20);
+            song_1.stop();
+            if(playing_2==false){
+                song_2.play();
+                document.getElementById("main").innerHTML="Current Song:VIBES";
+            }         
     }
-}
 }
