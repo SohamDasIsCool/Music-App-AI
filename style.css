@@ -28,3 +28,8 @@ float:none;
     font-size:15px;
     margin:15px;
 }
+canvas{
+    margin-top: 100px;
+    border:5px solid white;
+    border-radius: 20px;
+}
